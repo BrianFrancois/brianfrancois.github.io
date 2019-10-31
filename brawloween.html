@@ -12,7 +12,7 @@
    ========================================================================== */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:none}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
-.w-button{display:inline-block;padding:9px 15px;margin-left:16px;margin-right:16px;background-color:#3898EC;color:white;border:0;line-height:inherit;text-decoration:none;cursor:pointer;border-radius:0}input.w-button{-webkit-appearance:button}
+.w-button{display:inline-block;padding:16px 15px;margin-left:16px;margin-right:16px;width:96px;text-align:center;background-color:#3898EC;color:white;border:0;line-height:inherit;text-decoration:none;cursor:pointer;border-radius:0}input.w-button{-webkit-appearance:button}
 /* ==========================================================================
     CSS
    ========================================================================== */
@@ -163,7 +163,8 @@
 	display: -ms-flexbox;
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
+	min-height: -webkit-fill-available;
 	float: none;
 	clear: none;
 	-webkit-box-pack: justify;
@@ -233,70 +234,79 @@
 			<div id="c6" class="card c6" onclick="toggle_visibility('o6');toggle_visibility('c6b');toggle_visibility('show6');"><img alt="" height="240" src="card_6.jpg" width="180"></div>
 			<div id="c7" class="card c7" onclick="toggle_visibility('o7');toggle_visibility('c7b');toggle_visibility('show7');"><img alt="" height="240" src="card_7.jpg" width="180"></div>
 			<div id="c8" class="card c8" onclick="toggle_visibility('o8');toggle_visibility('c8b');toggle_visibility('show8');"><img alt="" height="240" src="card_8.jpg" width="180"></div>
+			<div id="c1-d" class="card" style="display:none;"><img alt="" height="240" src="card_1-dis.jpg" width="180"></div>
+			<div id="c2-d" class="card" style="display:none;"><img alt="" height="240" src="card_2-dis.jpg" width="180"></div>
+			<div id="c3-d" class="card" style="display:none;"><img alt="" height="240" src="card_3-dis.jpg" width="180"></div>
+			<div id="c4-d" class="card" style="display:none;"><img alt="" height="240" src="card_4-dis.jpg" width="180"></div>
+			<div id="c5-d" class="card" style="display:none;"><img alt="" height="240" src="card_5-dis.jpg" width="180"></div>
+			<div id="c6-d" class="card" style="display:none;"><img alt="" height="240" src="card_6-dis.jpg" width="180"></div>
+			<div id="c7-d" class="card" style="display:none;"><img alt="" height="240" src="card_7-dis.jpg" width="180"></div>
+			<div id="c8-d" class="card" style="display:none;"><img alt="" height="240" src="card_8-dis.jpg" width="180"></div>
+
 		</div>
 	</div>
 
 	<div id="o1" class="c-pick-1"><div class="overlay">
 		<a onclick="toggle_visibility('o1');toggle_visibility('c1b');" class="w-button">Cancel</a>
-		<div id="c1b" class="card-back"></div><div id="c1f" class="card-front"><img alt="" height="240" src="card_1.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c1b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c1f" class="card-front"><img alt="" height="240" src="card_1.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show1" href="#" onclick="toggle_visibility('c1f');toggle_visibility('c1b');toggle_visibility('show1');toggle_visibility('next1');toggle_visibility('c1');" class="w-button button">Show Card</div>
-		<a id="next1" href="#" onclick="toggle_visibility('o1');toggle_visibility('c1');toggle_visibility('show1');toggle_visibility('next1');" class="w-button button">Next Turn</a>
+		<a id="next1" href="#" onclick="toggle_visibility('o1');toggle_visibility('c1');toggle_visibility('show1');toggle_visibility('next1');toggle_visibility('c1-d');" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o2" class="c-pick-2"><div class="overlay">
 		<a onclick="toggle_visibility('o2');toggle_visibility('c2b');" class="w-button">Cancel</a>
-		<div id="c2b" class="card-back"></div><div id="c2f" class="card-front"><img alt="" height="240" src="card_2.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c2b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c2f" class="card-front"><img alt="" height="240" src="card_2.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show2" href="#" onclick="toggle_visibility('c2f');toggle_visibility('c2b');toggle_visibility('show2');toggle_visibility('next2');toggle_visibility('c2');" class="w-button button">Show Card</div>
-		<a id="next2" href="#" onclick="toggle_visibility('o2');toggle_visibility('c2');toggle_visibility('show2');toggle_visibility('next2');" class="w-button button">Next Turn</a>
+		<a id="next2" href="#" onclick="toggle_visibility('o2');toggle_visibility('c2');toggle_visibility('show2');toggle_visibility('next2');toggle_visibility('c2-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o3" class="c-pick-3"><div class="overlay">
 		<a onclick="toggle_visibility('o3');toggle_visibility('c3b');" class="w-button">Cancel</a>
-		<div id="c3b" class="card-back"></div><div id="c3f" class="card-front"><img alt="" height="240" src="card_3.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c3b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c3f" class="card-front"><img alt="" height="240" src="card_3.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show3" href="#" onclick="toggle_visibility('c3f');toggle_visibility('c3b');toggle_visibility('show3');toggle_visibility('next3');toggle_visibility('c3');" class="w-button button">Show Card</div>
-		<a id="next3" href="#" onclick="toggle_visibility('o3');toggle_visibility('c3');toggle_visibility('show3');toggle_visibility('next3');" class="w-button button">Next Turn</a>
+		<a id="next3" href="#" onclick="toggle_visibility('o3');toggle_visibility('c3');toggle_visibility('show3');toggle_visibility('next3');toggle_visibility('c3-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o4" class="c-pick-4"><div class="overlay">
 		<a onclick="toggle_visibility('o4');toggle_visibility('c4b');" class="w-button">Cancel</a>
-		<div id="c4b" class="card-back"></div><div id="c4f" class="card-front"><img alt="" height="240" src="card_4.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c4b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c4f" class="card-front"><img alt="" height="240" src="card_4.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show4" href="#" onclick="toggle_visibility('c4f');toggle_visibility('c4b');toggle_visibility('show4');toggle_visibility('next4');toggle_visibility('c4');" class="w-button button">Show Card</div>
-		<a id="next4" href="#" onclick="toggle_visibility('o4');toggle_visibility('c4');toggle_visibility('show4');toggle_visibility('next4');" class="w-button button">Next Turn</a>
+		<a id="next4" href="#" onclick="toggle_visibility('o4');toggle_visibility('c4');toggle_visibility('show4');toggle_visibility('next4');toggle_visibility('c4-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o5" class="c-pick-5"><div class="overlay">
 		<a onclick="toggle_visibility('o5');toggle_visibility('c5b');" class="w-button">Cancel</a>
-		<div id="c5b" class="card-back"></div><div id="c5f" class="card-front"><img alt="" height="240" src="card_5.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c5b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c5f" class="card-front"><img alt="" height="240" src="card_5.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show5" href="#" onclick="toggle_visibility('c5f');toggle_visibility('c5b');toggle_visibility('show5');toggle_visibility('next5');toggle_visibility('c5');" class="w-button button">Show Card</div>
-		<a id="next5" href="#" onclick="toggle_visibility('o5');toggle_visibility('c5');toggle_visibility('show5');toggle_visibility('next5');" class="w-button button">Next Turn</a>
+		<a id="next5" href="#" onclick="toggle_visibility('o5');toggle_visibility('c5');toggle_visibility('show5');toggle_visibility('next5');toggle_visibility('c5-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o6" class="c-pick-6"><div class="overlay">
 		<a onclick="toggle_visibility('o6');toggle_visibility('c6b');" class="w-button">Cancel</a>
-		<div id="c6b" class="card-back"></div><div id="c6f" class="card-front"><img alt="" height="240" src="card_6.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c6b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c6f" class="card-front"><img alt="" height="240" src="card_6.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show6" href="#" onclick="toggle_visibility('c6f');toggle_visibility('c6b');toggle_visibility('show6');toggle_visibility('next6');toggle_visibility('c6');" class="w-button button">Show Card</div>
-		<a id="next6" href="#" onclick="toggle_visibility('o6');toggle_visibility('c6');toggle_visibility('show6');toggle_visibility('next6');" class="w-button button">Next Turn</a>
+		<a id="next6" href="#" onclick="toggle_visibility('o6');toggle_visibility('c6');toggle_visibility('show6');toggle_visibility('next6');toggle_visibility('c6-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o7" class="c-pick-7"><div class="overlay">
 		<a onclick="toggle_visibility('o7');toggle_visibility('c7b');" class="w-button">Cancel</a>
-		<div id="c7b" class="card-back"></div><div id="c7f" class="card-front"><img alt="" height="240" src="card_7.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c7b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c7f" class="card-front"><img alt="" height="240" src="card_7.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show7" href="#" onclick="toggle_visibility('c7f');toggle_visibility('c7b');toggle_visibility('show7');toggle_visibility('next7');toggle_visibility('c7');" class="w-button button">Show Card</div>
-		<a id="next7" href="#" onclick="toggle_visibility('o7');toggle_visibility('c7');toggle_visibility('show7');toggle_visibility('next7');" class="w-button button">Next Turn</a>
+		<a id="next7" href="#" onclick="toggle_visibility('o7');toggle_visibility('c7');toggle_visibility('show7');toggle_visibility('next7');toggle_visibility('c7-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 
 	<div id="o8" class="c-pick-8"><div class="overlay">
 		<a onclick="toggle_visibility('o8');toggle_visibility('c8b');" class="w-button">Cancel</a>
-		<div id="c8b" class="card-back"></div><div id="c8f" class="card-front"><img alt="" height="240" src="card_8.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
+		<div id="c8b" class="card-back"><img alt="" height="240" src="card_back.jpg" width="180"></div><div id="c8f" class="card-front"><img alt="" height="240" src="card_8.jpg" width="180" style="-webkit-transform:rotate(180deg);-moz-transform: rotate(180deg);-ms-transform: rotate(180deg);-o-transform: rotate(180deg);transform: rotate(180deg);"></div>
 		<div id="show8" href="#" onclick="toggle_visibility('c8f');toggle_visibility('c8b');toggle_visibility('show8');toggle_visibility('next8');toggle_visibility('c8');" class="w-button button">Show Card</div>
-		<a id="next8" href="#" onclick="toggle_visibility('o8');toggle_visibility('c8');toggle_visibility('show8');toggle_visibility('next8');" class="w-button button">Next Turn</a>
+		<a id="next8" href="#" onclick="toggle_visibility('o8');toggle_visibility('c8');toggle_visibility('show8');toggle_visibility('next8');toggle_visibility('c8-d')" class="w-button button">Next Turn</a>
 		</div>
 	</div>
 </body>
